@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuestPass CR - Reservas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">QuestPass CR</a>
+
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="reservar.html">Reservar</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h1>Reserva tu experiencia</h1>
+
+            <p>
+                Completa el siguiente formulario para solicitar
+                una reserva de nuestras experiencias turísticas.
+            </p>
+        </section>
+
+        <section>
+
+            <h2>Formulario de reserva</h2>
+
+            <form action="#" method="get">
+
+                <div>
+                    <label for="nombre">Nombre completo:</label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        minlength="3"
+                        maxlength="60"
+                        required>
+                </div>
+
+                <div>
+                    <label for="correo">Correo electrónico:</label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        required>
+                </div>
+
+                <div>
+                    <label for="telefono">Teléfono:</label>
+
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        maxlength="9"
+                        pattern="[0-9]{4}-?[0-9]{4}"
+                        title="Ingresa 8 números, con o sin guion. Ejemplo: 8888-8888"
+                        required>
+                </div>
+
+                <div>
+                    <label for="experiencia">Selecciona una experiencia:</label>
+
+                    <select id="experiencia" name="experiencia" required>
+
+                        <option value="">Selecciona una opción</option>
+
+                        <option value="QST-001">Visita al Volcán Arenal</option>
+                        <option value="QST-002">Tour por Manuel Antonio</option>
+                        <option value="QST-003">Caminata en Monteverde</option>
+                        <option value="QST-004">Catarata La Fortuna</option>
+                        <option value="QST-005">Tour por Tortuguero</option>
+                        <option value="QST-006">Visita al Volcán Poás</option>
+
+                    </select>
+                </div>
+
+                <div>
+                    <label for="cantidad">Cantidad de entradas:</label>
+
+                    <input
+                        type="number"
+                        id="cantidad"
+                        name="cantidad"
+                        min="1"
+                        max="4"
+                        required>
+                </div>
+
+                <div>
+                    <input
+                        type="checkbox"
+                        id="condiciones"
+                        name="condiciones"
+                        required>
+
+                    <label for="condiciones">
+                        Acepto los términos y condiciones.
+                    </label>
+                </div>
+
+                <div>
+                    <button type="submit">Enviar solicitud</button>
+                </div>
+
+            </form>
+
+            <p>
+                Este formulario es una demostración.
+                Las reservas todavía no se registran.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 QuestPass CR. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

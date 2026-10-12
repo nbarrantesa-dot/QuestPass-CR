@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8f4;
+    color: #26352b;
+    line-height: 1.6;
+}
+
+
+
+header {
+    background-color: #2e6b45;
+    padding: 15px 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+nav > a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e8df;
+}
+
+
+
+h1 {
+    color: #245c3a;
+    font-size: 32px;
+}
+
+h2 {
+    color: #2e6b45;
+    font-size: 25px;
+}
+
+h3 {
+    color: #344e41;
+}
+
+
+
+main a {
+    display: inline-block;
+    background-color: #2e6b45;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+main a:hover {
+    background-color: #1d4930;
+}
+
+button {
+    background-color: #2e6b45;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4930;
+}
+
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: #f5f8f4;
+    border: 1px solid #d6e4d5;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+    color: #245c3a;
+}
+
+.tarjeta p {
+    margin-bottom: 15px;
+}
+
+.tarjeta a {
+    display: inline-block;
+    background-color: #2e6b45;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.tarjeta a:hover {
+    background-color: #1d4930;
+}
+
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aebfae;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+input[type="checkbox"] + label {
+    display: inline;
+    font-weight: normal;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #d69e35;
+    outline-offset: 2px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #d6e4d5;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #2e6b45;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f8f4;
+}
+
+
+
+footer {
+    background-color: #2e6b45;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        margin: 15px auto;
+        padding: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+}
+
+
+@media (min-width: 901px) {
+
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
